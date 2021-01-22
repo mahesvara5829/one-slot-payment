@@ -10,48 +10,37 @@
 
 ### Association
 
-- has_many :room_users
-- has_many :rooms, through: room_users
-- has_many :messages
+- has_many :payments
+- has_many :comments
 
 ## payments テーブル
 
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| store_id   | integer | null: false |
+| Column   | Type    | Options     |
+| -------- | ------- | ----------- |
+| store_id | integer | null: false |
 | kisyu_id | integer | null: false |
-| medal    | string | null: false |
-| ball | string | null: false |
-| month_id   | integer | null: false |
-| day_id | integer | null: false |
+| medal    | string  | null: false |
+| ball     | string  | null: false |
+| month_id | integer | null: false |
+| day_id   | integer | null: false |
+| memo     | text    | null: false |
+| user_id  | integer | null: false |
 
 ### Association
 
-- has_many :room_users
-- has_many :users, through: room_users
-- has_many :messages
-
-## room_users テーブル
-
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :room
 - belongs_to :user
+- has_many :comments
 
-## messages テーブル
+## comments テーブル
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| content | string     |                                |
-| user    | references | null: false, foreign_key: true |
-| room    | references | null: false, foreign_key: true |
+| Column     | Type    | Options     |
+| ---------- | ------- | ----------- |
+| user_id    | integer | null: false |
+| payment_id | integer | null: false |
+| text       | text    | null: false |
 
 ### Association
 
-- belongs_to :room
 - belongs_to :user
+- belongs_to :payment
+
