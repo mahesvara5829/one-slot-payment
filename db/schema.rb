@@ -15,6 +15,10 @@ ActiveRecord::Schema.define(version: 2021_01_22_201144) do
   create_table "payments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "store_id", null: false
     t.integer "kisyu_id", null: false
+    t.string "investment_medal", null: false
+    t.string "investment_ball", null: false
+    t.string "recovery_medal", null: false
+    t.string "recovery_ball", null: false
     t.string "medal", null: false
     t.string "ball", null: false
     t.integer "month_id", null: false

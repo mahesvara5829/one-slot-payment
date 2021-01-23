@@ -15,16 +15,20 @@
 
 ## payments テーブル
 
-| Column   | Type    | Options     |
-| -------- | ------- | ----------- |
-| store_id | integer | null: false |
-| kisyu_id | integer | null: false |
-| medal    | string  | null: false |
-| ball     | string  | null: false |
-| month_id | integer | null: false |
-| day_id   | integer | null: false |
-| memo     | text    | null: false |
-| user_id  | integer | null: false |
+| Column          | Type    | Options     |
+| --------------- | ------- | ----------- |
+| store_id        | integer | null: false |
+| kisyu_id        | integer | null: false |
+| investment_medal| string  | null: false |
+| investment_ball | string  | null: false |
+| recovery_medal  | string  | null: false |
+| recovery_ball   | string  | null: false |
+| medal           | string  | null: false |
+| ball            | string  | null: false |
+| month_id        | integer | null: false |
+| day_id          | integer | null: false |
+| memo            | text    | null: false |
+| user_id         | integer | null: false |
 
 ### Association
 

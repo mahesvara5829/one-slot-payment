@@ -10,6 +10,24 @@
   </head>
 
   <body>
+    <header> 
+      <div class = "header-logo">
+        <h1 class = "header-name">Payment</h1>
+      </div>
+      <div class = "header-lists">
+        <div class = "header-list">
+          <%= link_to 'ログイン', root_path, class:"link" %>
+        </div>
+        <div class = "header-list">
+          <%= link_to '新規登録', root_path, class:"link" %>
+        </div>
+      </div>
+    </header>
     <%= yield %>
+    <footer>
+      <div>
+        <h3 class = "footer-logo">Payment</h3>
+      </div>
+    </footer>
   </body>
 </html>
