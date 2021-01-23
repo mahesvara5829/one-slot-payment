@@ -22,7 +22,7 @@ class PaymentsController < ApplicationController
 
   private
   def payment_params
-    params.require(:payment).permit(:store_id, :kisyu_id, :investment_medal, :investment_ball, :recovery_medal, :recovery_ball, :medal, :ball, :month_id, :day_id, :memo).merge(user_id: current_user_id)
+    params.require(:payment).permit(:store_id, :kisyu_id, :investment_medal, :investment_ball, :recovery_medal, :recovery_ball, :medal, :ball, :month_id, :day_id, :memo).merge(user_id: current_user.id)
   end
 
 
